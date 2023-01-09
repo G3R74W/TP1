@@ -6,6 +6,7 @@
 #include "Author.h"
 #include "Book.h"
 #include "Reader.h"
+#include "Borrow.h"
 
 int main(){
   //creating first book
@@ -24,6 +25,13 @@ int main(){
   //creating the first reader
   Reader r("tobi", "wendl");
   std::cout << r;
+
+  //creating the first book loan
+
+  //creating the borrow date
+  Date bw_date(12, 24, 2022);
+  Borrow bw(bw_date, r, b);
+  std::cout<<bw;
   
   return 0;
 }
