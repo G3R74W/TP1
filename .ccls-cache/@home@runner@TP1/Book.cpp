@@ -1,42 +1,42 @@
 #include "Book.h"
 
 //constructor
-Book(std::string title, std::string language, std::string genre, Date publication, Author author)
+Book::Book(std::string title, std::string language, std::string genre, Date publication, Author author)
 : _title(title), _language(language), _genre(genre), _publication(publication), _author(author)
 {
   //create isbn
 }
   
 //getters
-Date get_publication(){
+Date Book::get_publication(){
   return _publication;
 }
-Author get_author(){
+Author Book::get_author(){
   return _author;
 }
-int get_isbn(){
+int Book::get_isbn(){
   return _isbn;
 }
-std::string get_title(){
+std::string Book::get_title(){
   return _title;
 }
-std::string get_language(){
+std::string Book::get_language(){
   return _language;
 }
-std::string get_genre(){
+std::string Book::get_genre(){
   return _genre;
 }
-std::vector<std::string> get_borrow_list(){
+std::vector<std::string> Book::get_borrow_list(){
   return _borrow_list;
 }
 
 //setters
-void add_borrow_list(std::string borrow_id){
+void Book::add_borrow_list(std::string borrow_id){
   _borrow_list.push_back(borrow_id);
 }
 
 //operator overloading
-friend std::ostream &operator<<(std::ostream &os, const Book &b){
+std::ostream &operator<<(std::ostream &os, const Book &b){
   os << "----------------------\n";
   os << "      BOOK INFO       \n";
   os << "----------------------\n";

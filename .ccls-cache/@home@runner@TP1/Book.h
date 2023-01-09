@@ -32,7 +32,7 @@ public:
   std::vector<std::string> get_borrow_list();
 
   //setters
-  void add_borrow_list();
+  void add_borrow_list(std::string borrow_id);
 
   //operator overloading
   friend std::ostream &operator<<(std::ostream &os, const Book &b);

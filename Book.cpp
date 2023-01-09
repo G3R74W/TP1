@@ -36,7 +36,7 @@ void Book::add_borrow_list(std::string borrow_id){
 }
 
 //operator overloading
-friend std::ostream &operator<<(std::ostream &os, const Book &b){
+std::ostream &operator<<(std::ostream &os, const Book &b){
   os << "----------------------\n";
   os << "      BOOK INFO       \n";
   os << "----------------------\n";

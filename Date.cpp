@@ -64,7 +64,7 @@ void Date::back() {
  */
 
 bool isDate(int month, int day, int year) {
-  if ((year < 2022) || (year > 2050))
+  if ((year < 1000) || (year > 2050))
     return false;
   if ((day < 1) || (day > 31))
     return false;
@@ -110,7 +110,7 @@ bool Date::operator==(const Date &d) const {
 
 // ajout de la surcharge de l'operateur "<<"
 std::ostream &operator<<(std::ostream &os, const Date &d) {
-  os << "----------------------";
+
   os << "\n";
 
   os << "Day :";
@@ -125,7 +125,5 @@ std::ostream &operator<<(std::ostream &os, const Date &d) {
   os << d._year;
   os << "\n";
 
-  os << "----------------------";
-  os << "\n";
   return os;
 }
