@@ -111,19 +111,12 @@ bool Date::operator==(const Date &d) const {
 // ajout de la surcharge de l'operateur "<<"
 std::ostream &operator<<(std::ostream &os, const Date &d) {
 
-  os << "\n";
-
-  os << "Day :";
   os << d._day;
-  os << "\n";
-
-  os << "Month :";
+  os << "/";
   os << d._month;
-  os << "\n";
-
-  os << "Year :";
+  os << "/";
   os << d._year;
+  os << "  (dd/mm/yy)";
   os << "\n";
-
   return os;
 }

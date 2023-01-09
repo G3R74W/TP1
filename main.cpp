@@ -5,6 +5,7 @@
 #include "Date.h"
 #include "Author.h"
 #include "Book.h"
+#include "Reader.h"
 
 int main(){
   //creating first book
@@ -19,5 +20,10 @@ int main(){
   Book b("first title", "english", "science fiction", d, a);
 
   std::cout << b;
+
+  //creating the first reader
+  Reader r("tobi", "wendl");
+  std::cout << r;
+  
   return 0;
 }
