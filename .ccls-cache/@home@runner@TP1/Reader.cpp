@@ -2,11 +2,11 @@
 
 Reader::Reader(std::string firstName, std::string lastName)
     : _firstName(firstName), _lastName(lastName) {
-  // create reader id
+  _reader_id = _firstName[1] + _lastName;
 }
 // getters
 std::string Reader::get_name() {
-  std::string full_name = _firstName + _lastName;
+  std::string full_name = _firstName + " " + _lastName;
   return full_name;
 }
 

@@ -17,10 +17,11 @@ private:
   std::vector<std::string> _borrow_list;
   Date _publication;
   Author _author;
+  bool _available;
 
 public:
   //constructor
-  Book(std::string title, std::string language, std::string genre, Date publication, Author author);
+  Book(std::string title, std::string language, std::string genre, Date publication, Author author, int isbn);
   
   //getters
   Date get_publication();
@@ -33,6 +34,7 @@ public:
 
   //setters
   void add_borrow_list(std::string borrow_id);
+  void set_available(bool away);
 
   //operator overloading
   friend std::ostream &operator<<(std::ostream &os, const Book &b);

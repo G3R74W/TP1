@@ -2,7 +2,9 @@
 
 Author::Author(std::string firstName, std::string lastName, Date birth_date)
     : _firstName(firstName), _lastName(lastName), _birth_date(birth_date) {
-  // create author id
+  std::string birthYear = std::to_string(_birth_date.year());
+  _author_id = _firstName[1] + _lastName + birthYear;
+      
 }
 
 // getters
