@@ -17,6 +17,7 @@ std::string Book::get_title() { return _title; }
 std::string Book::get_language() { return _language; }
 std::string Book::get_genre() { return _genre; }
 std::vector<std::string> Book::get_borrow_list() { return _borrow_list; }
+bool Book::get_available() { return _available; }
 
 // setters
 void Book::add_borrow_list(std::string borrow_id) {
@@ -52,7 +53,7 @@ std::ostream &operator<<(std::ostream &os, const Book &b) {
   os << "\n";
 
   os << "Language : ";
-  os << b._genre;
+  os << b._language;
   os << "\n";
 
   os << "Release date : ";

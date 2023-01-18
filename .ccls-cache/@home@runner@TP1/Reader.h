@@ -17,6 +17,8 @@ public:
   std::string get_name();
   std::vector<int> get_borrowed_books();
 
+  //setters
+  void add_borrowed_book(int isbn);
   // operator overloading
   friend std::ostream &operator<<(std::ostream &os, const Reader &r);
 };

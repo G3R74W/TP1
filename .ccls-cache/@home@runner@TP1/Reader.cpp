@@ -15,6 +15,10 @@ std::vector<int> Reader::get_borrowed_books() {
   return _borrowed_books;
 }
 
+//setters
+void Reader::add_borrowed_book(int isbn) {
+  _borrowed_books.push_back(isbn);
+}
 // operator overloading
 std::ostream &operator<<(std::ostream &os, const Reader &r) {
   os << "----------------------\n";

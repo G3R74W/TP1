@@ -31,6 +31,7 @@ public:
   std::string get_language();
   std::string get_genre();
   std::vector<std::string> get_borrow_list();
+  bool get_available();
 
   //setters
   void add_borrow_list(std::string borrow_id);

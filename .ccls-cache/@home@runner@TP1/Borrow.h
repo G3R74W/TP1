@@ -10,11 +10,11 @@
 class Borrow {
 private :
   Date _borrow_date;
-  Reader _reader;
-  Book _book;
+  Reader * _reader;
+  Book * _book;
   bool _away;
 public :
-  Borrow(Date borrow_date, Reader reader, Book book);
+  Borrow(Date borrow_date, Reader &reader, Book &book);
 
   //getter
   Date get_borrow_date();

@@ -17,6 +17,7 @@ public:
 
   //getters
   std::string get_author_id();
+  std::string get_author_name();
 
   //operator overloading
   friend std::ostream &operator<<(std::ostream &os, const Author &a);

@@ -25,12 +25,12 @@ private:
   std::vector<Author> _author_list;
   
 public:
-  Library(std::string name, std::vector<Book> book_list, std::vector<Author> author_list, std::vector<Reader> registered_readers);
+  Library(std::string name, std::vector<Book> &book_list, std::vector<Author> &author_list, std::vector<Reader> &registered_readers);
   //getters
   int get_nbr_books();
   std::vector<Book> get_book_list();
   std::vector<Reader> get_registered_readers();
-  std::vector<Book> get_borrow_list();
+  std::vector<Borrow> get_borrow_list();
   std::vector<Author> get_author_list();
 
   //setters
@@ -44,5 +44,8 @@ public:
 
   void borrow_book();
   void return_book();
+
+  //percentage of borrowed books
+  void percentage();
 };
 
